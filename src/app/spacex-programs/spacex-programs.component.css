@@ -1,0 +1,102 @@
+
+
+.alignBox{
+    text-align: center;
+    clear: both;
+}
+.imgBg{
+    max-width:100%;
+    height:auto;
+    background-color: #f6f6f6;
+}
+.btn{
+    width: 30%;
+    padding: 10px;
+    background-color: lightgreen;
+    margin:2% 10%;
+    float: left;
+    border: none;
+    border-radius: 5%;
+}
+.btn:active{
+    background-color: green;
+}
+.alignLine{
+    width: 80%;
+    margin: 0 10%;
+}
+.imgBg{
+    max-width:100%;
+    height:auto;
+    background: #f6f6f6;
+}
+.ml{
+    margin-left: 10%;
+}
+.colbg{
+    color: #777777;
+}
+@media (max-width: 700px){
+    .sidebar{
+       position: relative;
+        width: 100%;
+        background-color: white;
+    }
+    .mainblock{
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+    .card{
+        width: 94%; 
+        padding: 3%;
+        background-color: white;
+        float: left;
+        box-sizing: border-box;
+        max-height: none;
+      }
+}
+@media (min-width: 700px) and (max-width:1200px){
+    .sidebar{
+        position: absolute;
+        top:10.7%;
+        left:9px;
+        width: 24%;
+        background-color: white;
+    }
+    .mainblock{
+        position: relative;
+        width: 76%;
+        margin-left: 25%;
+    }
+    .card{
+        width: 46%; 
+        padding: 2%;
+        background-color: white;
+        float: left;
+        box-sizing: border-box;
+        max-height: 450px;
+      }
+}
+@media (min-width: 1200px){
+    .sidebar{
+        position: absolute;
+        top:10.7%;
+        left:9px;
+        width: 24%;
+        background-color: white;
+    }
+    .mainblock{
+        position: relative;
+        width: 76%;
+        margin-left: 25%;
+    }
+    .card{
+        width: 24%; 
+        padding: 1%;
+        background-color: white;
+        float: left;
+        box-sizing: border-box;
+        max-height: 450px;
+      }
+}

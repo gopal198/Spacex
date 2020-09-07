@@ -1,0 +1,96 @@
+<div class="sidebar">
+    <h4 class="ml">Filters</h4>
+    <div class="alignBox">
+        <h4>Launch Year</h4>
+        <div class="alignLine">
+            <hr />
+        </div>
+        <button class="btn" (click)="getfilterValue('2006')">
+            2006
+        </button>
+        
+        <button class="btn" (click)="getfilterValue('2007')">
+            2007
+        </button>
+        <button class="btn" (click)="getfilterValue('2008')">
+            2008
+        </button>
+        <button class="btn" (click)="getfilterValue('2009')">
+            2009
+        </button>
+        <button class="btn" (click)="getfilterValue('2010')">
+            2010
+        </button>
+        <button class="btn" (click)="getfilterValue('2011')">
+            2011
+        </button>
+        <button class="btn" (click)="getfilterValue('2012')">
+            2012
+        </button>
+        <button class="btn" (click)="getfilterValue('2013')">
+            2013
+        </button>
+        <button class="btn" (click)="getfilterValue('2014')">
+            2014
+        </button>
+        <button class="btn" (click)="getfilterValue('2015')">
+            2015
+        </button>
+        <button class="btn" (click)="getfilterValue('2016')">
+            2016
+        </button>
+        <button class="btn" (click)="getfilterValue('2017')">
+            2017
+        </button>
+        <button class="btn" (click)="getfilterValue('2018')">
+            2018
+        </button>
+        <button class="btn" (click)="getfilterValue('2019')">
+            2019
+        </button>
+        <button class="btn" (click)="getfilterValue('2020')">
+            2020
+        </button>
+    </div>
+    <div class="alignBox">
+        <h4>Successful Launch</h4>
+        <div class="alignLine">
+            <hr />
+        </div>
+        <button class="btn" (click)="getfilterValue(true,'launch_success')">
+            true
+        </button>
+        <button class="btn" (click)="getfilterValue(false,'launch_success')">
+            false
+        </button>
+    </div>
+    <div class="alignBox">
+        <h4>Successful Landing</h4>
+        <div class="alignLine">
+            <hr />
+        </div>
+        <button class="btn" (click)="getfilterValue(true,'launch_land')">
+            true
+        </button>
+        <button class="btn" (click)="getfilterValue(false,'launch_land')">
+            false
+        </button>
+    </div>
+</div>
+<div class="mainblock">
+    <div class="card-main" style="width: 100%;">
+        <div class="card" *ngFor="let space of spaceDetails">
+            <img [src]="space.links.mission_patch" class="imgBg">
+            <h3 class="colbg">{{space.mission_name}} #{{space.flight_number}}</h3>
+            <p>Mission Ids</p>
+            <ul>
+                <li *ngFor="let data of space.mission_id">
+                    <span class="colbg">{{data}}</span>
+                </li>
+            </ul>
+            <p>Launch Year: <span class="colbg">{{space.launch_year}}</span></p>
+            <p>Successful Launch: <span class="colbg">{{space.launch_success}}</span></p>
+            <p>Successful Landing: <span class="colbg">{{space.rocket?.first_stage?.cores[0]?.land_success}}</span></p>
+        </div>
+    </div>  
+</div>
